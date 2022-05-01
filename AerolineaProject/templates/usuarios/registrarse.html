@@ -1,0 +1,58 @@
+{% extends 'layout/base.html' %}
+{% block title %}
+    Registrarse
+{% endblock title %}
+{% block contenido %}
+    <h2>Formulario de Registro</h2>
+    <div class="container">
+        <form class="row g-3 bg-dark text-warning mt-4 mb-4 pb-2 rounded">
+            
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Clave</label>
+              <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Confirmar Clave</label>
+              <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4">
+              </div>
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">Usuario</label>
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+            <div class="col-6">
+              <label for="inputAddress" class="form-label">Nombres</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="Escribe tu nombre aqui">
+            </div>
+            <div class="col-6">
+              <label for="inputAddress2" class="form-label">Apellidos</label>
+              <input type="text" class="form-control" id="inputAddress2" placeholder="Escribe tus apellidos aqui">
+            </div>
+            
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">Pais</label>
+              <select id="inputState" class="form-select">
+                <option selected>Choose...</option>
+                <option>SV</option>
+                <option>USA</option>
+                <option>JP</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+                <label for="inputState" class="form-label">Rol</label>
+                <select id="inputState" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>ADMIN</option>
+                  <option>USER</option>
+                  <option>VISIT</option>
+                </select>
+              </div>           
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary btn-block">REGISTRAR</button>
+            </div>
+          </form>
+    </div>
+{% endblock contenido %}

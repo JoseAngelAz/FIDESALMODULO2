@@ -1,0 +1,39 @@
+{% extends 'layout/base.html' %}
+{% block title %}
+    Lista de usuarios
+{% endblock title %}
+
+{% block contenido %}
+    <h2>Lista de usuarios</h2>
+    <table class="table table-stripped table-dark">        
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Usuario</td>
+                <td>Nombres</td>
+                <td>Apellidos</td>
+                <td>Email</td>
+                <td>Rol</td>
+                <td>Pais</td>
+                <td>Acciones</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in usuarios %}
+                <tr>
+                    <th>{{user.idusuario}}</th>
+                    <th>{{user.usuario}}</th>
+                    <th>{{user.nombres}}</th>
+                    <th>{{user.apellidos}}</th>
+                    <th>{{user.email}}</th>
+                    <th>{{user.rol_id}}</th>
+                    <th>{{user.pais_id}}</th>
+                    <th>
+                        <button class="btn btn-danger">Eliminar</button>
+                        <button class="btn btn-warning">Editar</button>
+                    </th>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock contenido %}

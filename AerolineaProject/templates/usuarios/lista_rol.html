@@ -1,0 +1,28 @@
+{% extends 'layout/base.html' %}
+{% block title %}
+    lista de roles
+{% endblock title %}
+
+{% block contenido %}
+    <h2>Lista de los roles de usuarios</h2>
+    <div class="container">
+        <table class="table table-dark table-stripped">
+            <thead class="bg-warning">
+                <tr>
+                    <th>Id</th>
+                    <th>Rol</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            {% for rol  in lista_roles%}
+            <tbody>
+                    <th>{{rol.idrol}}</th>
+                    <th>{{rol.rol}}</th>
+            </tbody>
+                {% endfor %}
+            <th>
+                <button id="beso" class="btn btn-danger">Demonos un beso</button>
+            </th>
+        </table>
+    </div>
+{% endblock contenido %}
